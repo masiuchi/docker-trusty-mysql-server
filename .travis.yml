@@ -7,7 +7,7 @@ before_script:
   - sudo service mysql stop
 
 script:
-  - docker built -t docker-trusty-mysql-server .
+  - docker build -t docker-trusty-mysql-server .
   - docker run -d -p 3306:3306 docker-trusty-mysql-server
   - nc -z localhost 3306
 
